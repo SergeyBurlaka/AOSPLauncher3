@@ -345,6 +345,7 @@ public class LoaderResults {
         mUiExecutor.execute(r);
     }
 
+    //TODO filter apps here???
     public void bindAllApps() {
         // shallow copy
         @SuppressWarnings("unchecked")
