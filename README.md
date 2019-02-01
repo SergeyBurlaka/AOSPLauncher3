@@ -10,8 +10,11 @@ with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOS
 ## art
 
 <div class="center-block">
+  
+  <img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280538.jpg" height="1000" alt="Screenshot">
+  
 <img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280539.jpg" height="1000" alt="Screenshot"/>
 
-<img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280538.jpg" height="1000" alt="Screenshot">
+
 
 
