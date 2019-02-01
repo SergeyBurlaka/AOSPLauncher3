@@ -7,6 +7,10 @@ and is the base behind many customized launchers - even Google's own Now Launche
 My repo has [ore-m2-release ](https://android.googlesource.com/platform/packages/apps/Launcher3/+/oreo-m2-release) [Launcher3](https://android.googlesource.com/platform/packages/apps/Launcher3/) project branch 
 with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/build.gradle)  for android studio success building.
 
+## ART
+<div class="center-block">
+<img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280539.jpg" height="500" alt="Screenshot"/>
 
+<img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280538.jpg" height="500" alt="Screenshot">
 
 
