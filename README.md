@@ -17,16 +17,15 @@ with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOS
 
 
 ## code snippet 
-How aps loading into launcker view.
+How aps info loading into launcher view.
 
 > LauncherModel.java
 
 ```java
- com.android.launcher3
+com.android.launcher3
  
 public boolean startLoader(int synchronousBindPage){
-                // ----LoaderResults----
-                
+                    // ----LoaderResults----
                     loaderResults.bindWorkspace();
                     // For now, continue posting the binding of AllApps as there are other
                     // issues that arise from that.
@@ -41,15 +40,14 @@ public boolean startLoader(int synchronousBindPage){
 > LoaderResult.java
 
 ```java
-  com.android.launcher3.model
+com.android.launcher3.model
 
 //LoaderTask.java  mResults.bindAllApps()
-
 public void bindAllApps(){
 
        final ArrayList<AppInfo> list = (ArrayList<AppInfo>) mBgAllAppsList.data.clone();
-       
-         callbacks.bindAllApplications(list);  // (Launcher) bindAllApplications
+
+       callbacks.bindAllApplications(list);  // (Launcher) bindAllApplications
 }
 ```
 
