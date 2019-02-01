@@ -16,5 +16,7 @@ with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOS
 <img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280539.jpg" height="1000" alt="Screenshot"/>
 
 
+## how aps loading into launcker view
 
+{% gist a52fd9d50fbfcf9a21db5c8e803cb01b %}
 
