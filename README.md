@@ -18,5 +18,30 @@ with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOS
 
 ## how aps loading into launcker view
 
-{% gist a52fd9d50fbfcf9a21db5c8e803cb01b %}
+```java
+ com.android.launcher3.allapps   
+ 
+   private final AlphabeticalAppsList mApps;
+
+  public void setPredictedApps(List<ComponentKeyMapper<AppInfo>> apps) {
+       [- AlphabeticalAppsList-] mApps.setPredictedApps(apps);
+    }
+
+
+
+//LOAD APS INTO VIEW->
+ [- AlphabeticalAppsList-] mApps.setPredictedApps(apps);
+
+
+//BIND APPS
+LoaderResults[]---|
+                  |
+                  | 
+   public void bindAllApplications(final ArrayList<AppInfo> apps) [-
+                                                                   
+                                           mAppsView.setApps(apps);
+                                          mLauncherCallbacks.bindAllApplications(apps);
+                                                                   
+                                                                   -]
+```
 
