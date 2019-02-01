@@ -16,32 +16,52 @@ with fixed and bring-up [build gradle file](https://github.com/SergeyBurlaka/AOS
 <img src="https://github.com/SergeyBurlaka/AOSPLauncher3/blob/oreo-m2-release/art/photo5377854175276280539.jpg" height="1000" alt="Screenshot"/>
 
 
-## how aps loading into launcker view
+## code snippet 
+> How aps loading into launcker view.
+
+> LauncherModel.java
 
 ```java
- com.android.launcher3.allapps   
+ com.android.launcher3
  
-   private final AlphabeticalAppsList mApps;
+public boolean startLoader(int synchronousBindPage)
+                // ----LoaderResults----
+                                         
+                    
+                    loaderResults.bindWorkspace();
+                    // For now, continue posting the binding of AllApps as there are other
+                    // issues that arise from that.
+                    loaderResults.bindAllApps();
+                    loaderResults.bindDeepShortcuts();
+                    loaderResults.bindWidgets();
 
-  public void setPredictedApps(List<ComponentKeyMapper<AppInfo>> apps) {
-       [- AlphabeticalAppsList-] mApps.setPredictedApps(apps);
-    }
 
-
-
-//LOAD APS INTO VIEW->
- [- AlphabeticalAppsList-] mApps.setPredictedApps(apps);
-
-
-//BIND APPS
-LoaderResults[]---|
-                  |
-                  | 
-   public void bindAllApplications(final ArrayList<AppInfo> apps) [-
-                                                                   
-                                           mAppsView.setApps(apps);
-                                          mLauncherCallbacks.bindAllApplications(apps);
-                                                                   
-                                                                   -]
 ```
 
+> LoaderResult.java
+
+```java
+  com.android.launcher3.model
+
+//LoaderTask.java  mResults.bindAllApps()
+
+public void bindAllApps()
+
+       final ArrayList<AppInfo> list = (ArrayList<AppInfo>) mBgAllAppsList.data.clone();
+       
+         callbacks.bindAllApplications(list);  // (Launcher) bindAllApplications
+
+```
+
+>LoaderTask.java
+
+```java
+
+            // second step
+            if (DEBUG_LOADERS) Log.d(TAG, "step 2.1: loading all apps");
+            loadAllApps();
+
+            if (DEBUG_LOADERS) Log.d(TAG, "step 2.2: Binding all apps");
+            verifyNotStopped();
+            mResults.bindAllApps();
+```
