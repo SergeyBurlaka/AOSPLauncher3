@@ -159,10 +159,15 @@ public class LoaderTask implements Runnable {
             if (DEBUG_LOADERS) Log.d(TAG, "Waited " + (SystemClock.uptimeMillis() - now) + "ms");
             verifyNotStopped();
 
+            //ЗАГРУЗКА ПРИЛОЖЕНИЙ
             // second step
             if (DEBUG_LOADERS) Log.d(TAG, "step 2.1: loading all apps");
             loadAllApps();
 
+
+            //ВСЕ ИДЕТ БЛОКИРЮЩИМ ОБРАЗОМ ДРУГ ЗА ДРУГОМ
+
+            //ТУТ УЖЕ И РЕЗУЛЬТАТ БИНДИМ
             if (DEBUG_LOADERS) Log.d(TAG, "step 2.2: Binding all apps");
             verifyNotStopped();
             mResults.bindAllApps();

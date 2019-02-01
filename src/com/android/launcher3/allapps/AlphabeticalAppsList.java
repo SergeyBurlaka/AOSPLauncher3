@@ -527,7 +527,7 @@ public class AlphabeticalAppsList {
                 lastFastScrollerSectionInfo.fastScrollToItem = appItem;
             }
             mAdapterItems.add(appItem);
-            mFilteredApps.add(info);
+            mFilteredApps.add(info); // <--- TODO use this for app filter
         }
 
         if (hasFilter()) {
